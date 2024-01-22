@@ -1,0 +1,33 @@
+<%- include('header.ejs') %>
+<main>
+    <p><%= locals.messages %></p>
+    
+    <% if (isLogged) { %>
+        
+        <form method="post" class="loginForm">                
+            <label for="post">Crée nouvelle discussion</label>
+            <input type="text" name="post" id="post" />
+            <input type="submit" value="Créé" class="btn" />
+        </form>
+    <% } %>
+
+    <% if (!locals.messages) { %>
+        <% for (const question of reponse) { %>
+            <ul class="listeForum">
+                <li>
+                    <%= question.post %>
+                    <%= question.date %>
+                    <% if (isLogged) { %>
+                        <form method="post" class="loginFormPost">                
+                            <label for="post">repondre</label>
+                            <input type="text" name="post" id="post" />
+                            <input type="submit" value="Envoyer" class="btn" />
+                        </form> 
+                    <% } %>
+                </li>       
+            </ul>   
+        <% } %>
+    <% } %>
+</main>
+
+<%- include('footer.ejs') %>

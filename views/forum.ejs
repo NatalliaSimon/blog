@@ -1,0 +1,41 @@
+<%- include('header.ejs') %>
+<main>
+    <% if (isLogged) {%>
+
+        <form method="POST" id="search">
+            <input type="text" id="noms" placeholder="Nom du discussions">
+            <button type="submit" class="btnRdv">Rechercher</button>
+        </form>
+        <div id="search-result">
+
+        </div>
+        <% } %>
+    <div>
+        <% if (isLogged) { %>
+            <form method="post" class="loginForm">                
+                <label for="nom">Crée nouvelle discussion</label>
+                <input type="text" name="nom" id="nom" />
+                <input type="submit" value="Créé" class="btn" />
+            </form>
+            
+        <% } %>
+        <div>
+            <% if (locals.messages && !isLogged) { %>
+                <p><%= messages %></p>
+            
+            <% } %>
+        </div>
+    </div>
+    <section>
+        <h2> Nos themes de discussions</h2>
+        <% for (const top of listeTopic) { %>
+            <ul class="liste">
+                <li>
+                    <a href="message/<%= top.id %>" > <%= top.nom %></a>  
+                </li>                
+            </ul>    
+                <% } %>
+    </section>
+</main>
+
+<%- include('footer.ejs') %>

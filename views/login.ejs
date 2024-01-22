@@ -1,0 +1,18 @@
+<%- include('header.ejs') %> 
+
+<main>
+    <% if (locals.message) { %>
+        <p><%= message %></p>
+    <% } %>
+    
+        <form method="post" class="loginForm">
+            <label for="email" >Votre email</label>
+            <input type="email" name="login" id="email" />
+            <label for="mdp">Votre mot de passe</label>
+            <input type="password" name="mdp" id="mdp" />            
+            <input type="submit" value="Login" class="btn" />
+        </form>
+        
+</main>
+
+<%- include('footer.ejs') %>

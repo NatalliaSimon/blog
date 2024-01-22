@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLOG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet" />
+    
+</head>
+<header>
+    <div class="log">
+        <div></div>
+    <h1>Blog a partagé</h1>
+    <% if (!isLogged) { %>
+    <a href="/login" ><strong>LogIn</strong></a>
+    <a href="/newUser" ><strong>SingUp</strong></a>
+    <% } %>
+    <% if (isLogged) { %>
+        <a href="/profil" ><strong>Mon Profil</strong></a>
+        <% } %>
+</div>
+    <ul class="menu">
+        <li><a href="/" class="link"><strong>Home</strong></a></li>
+        <li><a href="/add" class="link"><strong>Ajouter un article</strong></a></li>
+        <li><a href="/forum" class="link"><strong>Forum</strong></a></li>
+        <li><a href="/add" class="link"><strong>Liens utiles</strong></a></li>
+        
+    </ul>
+</header>
+<body>
+  

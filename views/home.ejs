@@ -1,0 +1,32 @@
+<%- include('header.ejs') %>
+<main>
+    <div>
+        <h2> Nos articles</h2>
+    </div>
+    <form  id="searchAll">
+        <input type="text" id="nom" placeholder="Le titre rechercher">
+        <button type="submit" class="btnRdv">Rechercher</button>
+    </form>
+    <div id="resultat">
+
+    </div>
+    
+    <section>
+        <% for (const tab of data) { %>
+            <ul class="liste">
+                <li>
+                   <h3> <%= tab.titre %></h3>
+                </li>
+                <div class="publication">
+                <li>
+                    <%= tab.text %> 
+                </li>
+                <li> <img width="50%"  src=" <%= tab.photo %>" />
+                </li>
+            </div>
+            </ul>    
+                <% } %>
+    </section>
+</main>
+
+<%- include('footer.ejs') %>

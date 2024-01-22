@@ -1,0 +1,18 @@
+<%- include('header.ejs') %> 
+
+<main>
+       
+    
+        <form method="post" class="loginForm">
+            <label for="email" >Votre email</label>
+            <input type="email" name="login" id="email" />
+            <label for="mdp">Votre mot de passe</label>
+            <input type="password" name="mdp" id="mdp" />
+            <label for="pseudo">Votre pseudo</label>
+            <input type="text" name="pseudo" id="pseudo" />
+            <input type="submit" value="Login" class="login" />
+        </form>
+        
+</main>
+
+<%- include('footer.ejs') %>

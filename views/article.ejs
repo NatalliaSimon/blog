@@ -1,0 +1,23 @@
+<%- include('header.ejs') %>
+<main>
+
+
+<section>
+    <% for (const article of articles) { %>
+        <ul class="liste">
+            <li>
+               <h3> <%= article.titre %></h3>
+            </li>
+            <div class="publication">
+            <li>
+                <%= article.text %> 
+            </li>
+            <li> <img width="50%"  src=" /<%= article.photo %>" />
+            </li>
+        </div>
+        </ul>    
+            <% } %>
+</section>
+</main>
+
+<%- include('footer.ejs') %>

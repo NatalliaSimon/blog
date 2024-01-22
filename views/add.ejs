@@ -1,0 +1,11 @@
+<%- include('header.ejs') %>
+<main>
+<form class="add-form" method="post" enctype="multipart/form-data">
+    <label for="photo">Photo</label><input id="photo" type="file" name="photo" />
+    <label for="titre">Nom</label><input id="titre" name="titre" type="text" />    
+    <label for="text">Vous pouvez ecrire votre article ici </label>
+    <textarea id="text" name="text" ></textarea>
+    <button type="submit" class="btn">Envoyer</button>
+</form>
+</main>
+<%- include('footer.ejs') %>
